@@ -1,5 +1,4 @@
-
- * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,7 +7,6 @@
 body {
     font-family: "Noto Sans TC","Noto Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-
 .nav {
     background-color: #476930;
     width: 100%;
@@ -55,16 +53,17 @@ body {
     display: none;
     position: absolute;
     background-color: white;
+    top: 100%; 
+    z-index: 999;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin-top: 5px;
     top: 100%;         
     gap: 10px; 
-    z-index: 9;
+    
 }
 
 .dropdown {
     position: relative;
-    z-index: 8;
+    
 }
 .navbar .submenu a {
     
@@ -72,14 +71,12 @@ body {
 }
 
 .dropdown:hover .submenu {
-    display: block;
     display: flex;
     padding: 5px;
     color: #2e5d35; 
     flex-direction: column; 
 
 }
-
 .picks-banner {
     width: 100vw;
     height: 300px; 

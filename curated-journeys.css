@@ -140,9 +140,10 @@ body {
 
 }
 .dropdown-container {
-        max-width: 1000px;
+        max-width: 1200px;
         text-align: right;
         padding: 20px; 
+
     }
 
 .select {

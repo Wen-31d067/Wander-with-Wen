@@ -240,7 +240,7 @@ body {
 .contact-form p{
     letter-spacing: 2px;
 }
-.form-button{
+/* .form-button{
     background-color: white;
     border-radius: 30px;
     border: 2px solid #2e5d35;
@@ -251,7 +251,7 @@ body {
     text-decoration: none;
     transition: background-color 0.3s;
     
-}
+} */
 .form-button:hover{
     background-color:  #2e5d35;
     color: white;
@@ -276,8 +276,45 @@ body {
     object-fit: cover;
     z-index: 1;
 }
+.contact-us-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
 
+.contact-us-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+    
+}
 
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+form button:hover {
+    background-color: #72983d;
+}
+form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #86B049;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
 .site-footer {
     background-color: #476930;
     color: white;

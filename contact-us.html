@@ -4,11 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>聯絡我們</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact-us.css">
-    <script defer src="nav.js"></script>
 </head>
 <body>
-<div id="nav-placeholder">這是導航列載入區</div>
+<header>
+<section class="nav">
+    <div class="navbar">
+    <div class="logo">
+        <a href="index.html">
+    <img src="logo.png" alt="logo">
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about-us.html">關於我們</a></li>
+        <li class="dropdown">
+            <a href="curated-journeys.html">旅途誌</a>
+            <ul class="submenu">
+            <li><a href="asia.html">亞洲</a></li>
+            <li><a href="#">北美洲</a></li>
+            <li><a href="#">南美洲</a></li>
+        </ul>
+        </li>
+        <li><a href="scenic-picks.html">旅圖精選</a></li>
+        <li><a href="contact-us.html">聯絡我們</a></li>
+    </ul>
+    </div>
+</section>
+</header>
 
     
     <section class="contact-banner">
@@ -60,23 +83,24 @@
     <input type="email" id="email" name="email" required>
 
     <label for="story">旅行故事</label>
-    <textarea id="story" name="story" rows="5" placeholder="歡迎你投稿旅遊故事、旅行小秘訣、風景照或旅遊照片，我們將會挑選優秀內容刊登在網站上，讓更多人看到你的旅程 🌍" required></textarea>
+    <textarea id="story" name="story" rows="10" placeholder="歡迎你投稿旅遊故事、旅行小秘訣、風景照或旅遊照片，我們將會挑選優秀內容刊登在網站上，讓更多人看到你的旅程 🌍" required></textarea>
 
     <label for="photo">上傳照片（可選）</label>
     <input type="file" id="photo" name="photo" accept="image/*">
 
-    <button type="submit">送出表單</button>
+    <button type="submit" class="submit-btn">送出表單</button>
+
 </form>
 </section>
 
 
-<div class="form-backpacker">
+<!-- <div class="form-backpacker">
     <div class="form-backpacker-text">
     <h2>Discovering who I am through where I go.</h2>
     </div>
     <img src="backpacker.jpeg" alt="">
 
-</div>
+</div> -->
 
 <footer class="site-footer">
 <div class="footer-container">

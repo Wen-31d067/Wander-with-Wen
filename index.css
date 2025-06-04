@@ -15,7 +15,7 @@
     position: relative;
 
 }
-.cta-button{
+/* .cta-button{
     background-color: #86B049;
     color: white;
     font-size: 20px;
@@ -32,8 +32,22 @@
     text-decoration: none;
     letter-spacing: 5px;
     
+} */
+.cta-button {
+    background-color: #86B049;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 25px;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: 500;
+    position: absolute;
+    bottom: -60px;
+    right: 10px;
+    box-sizing: border-box;
 }
-
 
 .destinations{
     display: flex; 

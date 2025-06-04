@@ -44,7 +44,7 @@
 }
 
 .slogan-pic {
-    position: relative; /* ✅ 要保留 relative */
+    position: relative; 
     flex: 3;
     height: 400px;
     justify-content: flex-end;
@@ -201,12 +201,10 @@
     border-radius: 6px;
 }
 
-label {
-    color: #476930;
-    font-weight: bold;
-    padding-bottom: 4px;
-    margin-bottom: 8px;
+.contact-us-form label {
+color: #476930;
 }
+
 
 textarea::placeholder {
     color: #acacac; 

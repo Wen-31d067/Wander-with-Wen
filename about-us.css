@@ -59,6 +59,7 @@
 
 .intro-image img {
     width: 100%;
+    vertical-align: bottom;
     height: auto;
     
 }
@@ -82,13 +83,13 @@
 
 .line {
     height: 4px;
-    background-color: #2e5d35;
+    background-color: #86B049;
     width: 150px;
     margin-top: 50px;
     
 }
 .about-mission,
-.second {
+.about-mission-second{
     display: flex;
     align-items: center;
     max-width: 1200px;
@@ -123,7 +124,6 @@
     box-sizing: border-box;
     text-align: center;
     
-    
 }
 
 .mission-text h2{
@@ -134,32 +134,110 @@
     margin: 30px auto 0; 
     
 }
-.bird-image {
-    position: relative;
-    width: 100vw;
-    height: 1000px;
-    overflow: hidden;
+.photo-row{
+    display: flex;
     margin-top: 50px;
 }
+.photo-row img{
+    flex: 1 1 33.3333%; 
+    max-width: 33.3333%;
+    height: auto;
+    /* display: block;     */
+    object-fit: cover;
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    .intro-text h2{
+        font-size: 25px;
+    }
+}
 
-.bird-image .bg {
-    width: 100%;    
+@media (max-width: 768px){
+
+.about-intro{
+    display: flex;
+    flex-direction:column;
+    gap: 20px; 
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+.intro-image{
+    max-width: 250px;   
+    overflow: hidden;
+}
+.intro-text h2{
+        font-size: 20px;
+    }
+.intro-text p{
+    max-width: 500px;
+    padding-top: 20px;   
+    }
+.line {
+    margin-top: 20px;
+    
+}
+.about-mission,
+.about-mission-second{
+    display: flex;
+    margin: 0 auto; 
+    padding: 0px;
+    justify-content: center;
+}
+.about-mission{
+    flex-direction:column-reverse;
+}
+.about-mission-second{
+    flex-direction: column;
+}
+.mission-text {
+    padding: 0px;
+}
+.mission-text h2{
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+.about-image {
+    height: 350px;
+    width: 400px;
+    overflow: hidden;
+    padding-bottom: 5px;
+
+}
+.about-image img{
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-.bird-image .bird {
-    position: absolute;
-    top: 0px;
-    left: 15%;
-    width: 260px;
+.photo-row{
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
 }
-.bird-image .bird2 {
-    position: absolute;
-    top: -50px;
-    right: 5%;
-    width: 360px;
-    transform: rotate(30deg);
-    
+.photo-row img{
+    width: 100%;            
+    height: auto;       
+    object-fit: cover;   
+    display: flex;
+    flex: 1 1 100%;
+    max-width:fit-content
+}
+
+}
+
+@media (min-width: 570px) and (max-width: 768px){
+.photo-row{
+    display: flex;
+    flex-direction: row;
+}
+.photo-row img{
+    flex: 1 1 33.3333%; 
+    max-width: 33.3333%;
+    height: auto;
+    object-fit: cover;
+}
+.mission-text h2{
+    font-size: 25px;
+}
 }

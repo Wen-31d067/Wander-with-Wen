@@ -6,34 +6,11 @@
     <title>關於我們</title>  
     <link rel="stylesheet" href="style.css">   
     <link rel="stylesheet" href="about-us.css">  
-
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="nav.js" defer></script>
 </head>
 <body>
-
-<header>
-<section class="nav">
-    <div class="navbar">
-    <div class="logo">
-        <a href="index.html">
-    <img src="logo.png" alt="logo">
-    </div>
-    <ul class="nav-links">
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="about-us.html">關於我們</a></li>
-        <li class="dropdown">
-            <a href="curated-journeys.html">旅途誌</a>
-            <ul class="submenu">
-            <li><a href="asia.html">亞洲</a></li>
-            <li><a href="#">北美洲</a></li>
-            <li><a href="#">南美洲</a></li>
-        </ul>
-        </li>
-        <li><a href="scenic-picks.html">旅圖精選</a></li>
-        <li><a href="contact-us.html">聯絡我們</a></li>
-    </ul>
-    </div>
-</section>
-</header>
+<div id="nav-placeholder"></div>
 
 
 <section class="about-banner">
@@ -49,7 +26,7 @@
     </div>
 
     <div class="intro-text">
-    <h2>關於 Wander with Wen</h2>
+    <h2>關於Wander with Wen</h2>
     <p>
         Wander with Wen為熱愛探索文化與旅行紀錄的你而生，由設計師與旅人組成，發掘世界被遺忘的角落，留下每段獨特足跡。想捕捉旅途中的溫度與真實，將那些不被觀光手冊記錄的風景，分享給同樣熱愛感受世界的你。
     </p>
@@ -70,7 +47,7 @@
     </div>
 </section>
 
-<section class="about-mission second">
+<section class="about-mission-second">
     <div class="about-image">
     <img src="nightmarket.jpeg" alt="夜市照片">
     </div>
@@ -81,42 +58,28 @@
     </div>
 </section>
 
-<section class="bottom">
-<div class="bird-image">
-    <img src="house.png" class="bg" alt="">
-    <img src="handdrawn.png" class="bird" alt="鳥圖">
-    <img src="handdrawn.png" class="bird2" alt="鳥圖">
-</div>
+<section class="photo-row">
+    <img src="team.jpeg" alt="同事合作">
+    <img src="board.jpeg" alt="佈告欄">
+    <img src="meeting.jpeg" alt="開會">
 </section>
 
-<footer class="site-footer">
-<div class="footer-container">
-    <div class="footer-left">
-        <p>不想錯過下次的旅行靈感嗎？</p>
-        <p>訂閱電子報，第一時間收到最真實的旅遊故事與小資秘境推薦！</p>
-        <form class="subscribe-form">
-        <input type="email" placeholder="輸入您的email">
-        <button>訂閱電子報</button>
-</form>
-    </div>
 
-<div class="footer-right">
-        <div class="footer-links">
-        <a href="index.html">首頁</a>
-        <a href="about-us.html">關於我們</a>
-        <a href="curated-journeys.html">旅途誌</a>
-        <a href="scenic-picks.html">旅圖精選</a>
-        <a href="contact-us.html">聯絡我們</a>
-</div>
-        <div class="footer-social">
-        </a><img src="fb.png" alt="Facebook">
-        <img src="youtube.png" alt="YouTube">
-        <img src="instagram.png" alt="Instagram">
-        </div>
-    </div>
-</div>
-</footer>
+<div id="footer-placeholder"></div>
 
 
+<script>
+    fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+    });
+
+    fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
 </body>
 </html>

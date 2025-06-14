@@ -36,83 +36,92 @@
 }
 .top {
     text-align: center;
-    border: 1px solid black;
-    border-radius: 999px;
-    padding: 20px 30px;
     display: block;      
     width: fit-content;    
     margin: 0 auto;      
     margin-bottom: 40px;
 }
 
-
-
+/* ✅ 格線容器 - 根據 class 名決定每行幾張卡片 */
 .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 24px;
-    padding: 10px 20px 10px 20px;
-    
-    max-width: 1200px; 
-    margin: 0 auto;    
-
+  display: grid;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px 10px 20px;
 }
 
+/* 2 欄排法 */
+.photo-grid.two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3 欄排法 */
+.photo-grid.three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+@media (max-width: 768px) {
+  .photo-grid.two-cols,
+  .photo-grid.three-cols {
+    grid-template-columns: 1fr; /* 手機變1欄 */
+    padding:  10px 10px 10px 10px; 
+    gap: 10px;
+    margin: 0px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .photo-grid.two-cols,
+  .photo-grid.three-cols {
+    padding-bottom: 0px;
+  }
+}
+/* ✅ 單張卡片樣式 */
 .photo-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    cursor: pointer;
-    height: 350px;
-    
-    
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 350px;
+  cursor: pointer;
 }
 
+/* ✅ 圖片樣式 */
 .photo-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.4s ease;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+  display: block;
 }
 
+/* ✅ 滑入時的 info 區塊 */
 .photo-card .info {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 40px;
-    opacity: 0;
-    font-weight: 400;
-    letter-spacing: 4px;
-    transition: 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 18px;
-    
-    line-height: 1.6;
-
-
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 40px;
+  opacity: 0;
+  font-weight: 400;
+  letter-spacing: 4px;
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
+/* ✅ 滑入時圖片放大 + 文字浮現 */
 .photo-card:hover img {
-    filter: brightness(90%);
-    transform: scale(1.05);
+  filter: brightness(90%);
+  transform: scale(1.05);
 }
 
 .photo-card:hover .info {
-    opacity: 1;
+  opacity: 1;
 }
-
-.photo-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px 10px 20px;
-}
-
 

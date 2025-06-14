@@ -6,31 +6,13 @@
     <title>旅途誌</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="curated-journeys.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="nav.js" defer></script>
 </head>
 
 <body>
-<section class="nav">
-    <div class="navbar">
-    <div class="logo">
-        <a href="index.html">
-    <img src="logo.png" alt="logo">
-    </div>
-    <ul class="nav-links">
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="about-us.html">關於我們</a></li>
-        <li class="dropdown">
-            <a href="curated-journeys.html">旅途誌</a>
-            <ul class="submenu">
-            <li><a href="asia.html">亞洲</a></li>
-            <li><a href="#">北美洲</a></li>
-            <li><a href="#">南美洲</a></li>
-        </ul>
-        </li>
-        <li><a href="scenic-picks.html">旅圖精選</a></li>
-        <li><a href="contact-us.html">聯絡我們</a></li>
-    </ul>
-    </div>
-</section>
+    <div id="nav-placeholder"></div>
+
 </header>
 <section class="contact-banner">
     <div class="banner">
@@ -39,19 +21,20 @@
 </div>
 </section>
 <div class="continent-buttons">
-    <a href="asia.html" class="continent asia">亞洲</a>
+    <a href="asia.html" class="continent asia">亞&nbsp;&nbsp;&nbsp;&nbsp;洲</a>
     <a href="asia.html" class="continent south">南美洲</a>
     <a href="asia.html" class="continent north">北美洲</a>
 </div>
 <div class="dropdown-container">
-    <label for="continent">搜尋洲別：</label>
-    <select id="continent" name="continent">
-        <option selected disabled>搜尋洲別</option>
+    <label for="continent-select">依洲別搜尋：</label>
+    <select id="continent-select" name="continent" class="select">
+        <option selected disabled>搜尋洲別 ▾ </option>
         <option value="asia">亞洲</option>
         <option value="na">北美洲</option>
         <option value="sa">南美洲</option>
     </select>
 </div>
+
 
 <section class="card-container">
 <div class="card-list">
@@ -183,21 +166,18 @@
 </form>
     </div>
 
-<div class="footer-right">
-        <div class="footer-links">
-        <a href="index.html">首頁</a>
-        <a href="about-us.html">關於我們</a>
-        <a href="curated-journeys.html">旅途誌</a>
-        <a href="scenic-picks.html">旅圖精選</a>
-        <a href="contact-us.html">聯絡我們</a>
-</div>
-        <div class="footer-social">
-        </a><img src="fb.png" alt="Facebook">
-        <img src="youtube.png" alt="YouTube">
-        <img src="instagram.png" alt="Instagram">
-        </div>
-    </div>
-</div>
-</footer>
+<script>
+    fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+    });
+
+    fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
 </body>
 </html>

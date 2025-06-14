@@ -7,46 +7,44 @@
     display: flex;
     justify-content: center; 
     align-items: center; 
+    width: 100vw;
 }
-.hero-content{
-    display: inline-block;
-    gap: 20px;
+.hero-content {
+    display: flex;
     flex-direction: column;
-    position: relative;
-
+    gap: 12px;
+    align-items: flex-end; 
+    text-align: right;
 }
-/* .cta-button{
-    background-color: #86B049;
-    color: white;
-    font-size: 20px;
+.hero h1{
     font-weight: 500;
-    padding: 15px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-radius: 25px;
-    width: auto;
-    display: inline-block;
-    position: absolute;
-    bottom: -60px;
-    right: 0px; 
-    text-decoration: none;
     letter-spacing: 5px;
-    
-} */
+    font-size: clamp(23px, 5vw, 45px);
+}
+
 .cta-button {
     background-color: #86B049;
     color: white;
     font-size: 18px;
-    padding: 12px 24px;
+    padding: 10px 19px 13px 18px;
     border-radius: 25px;
     display: inline-block;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: 500;
-    position: absolute;
-    bottom: -60px;
-    right: 10px;
-    box-sizing: border-box;
+    line-height: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* line-height: 1; */
+    /* text-box: trim-both cap alphabetic; */
+
+}
+
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); 
+    background-color: #749644;
 }
 
 .destinations{
@@ -54,42 +52,46 @@
     width: 100%;
     height: auto;
     justify-content: center;
-    padding: 15px;
-    
 }
 .card p {
     font-size: 16px;
     font-weight: 500;
     align-items: center;
-    letter-spacing: 3px;
+    letter-spacing:1px;
+    display: flex; 
+    padding-top: 5px;
     
 }
+
 .card img{
-    width: 200px;
-    height: 300px;
+    width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    aspect-ratio: 2 / 3;
 }
 .card{
+    width: 100%;
     margin: 15px;
-    width: 200px;
+    max-width: 200px;
     margin-top: -90px;
     align-items: center;
     display: flex;
     flex-direction: column;
-    
+}
+.card .place-icon {
+    width:  14px;
+    height: 14px;
+    vertical-align: middle; 
 }
 
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;          
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+.slogan-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;          
+        align-items: center;
+        justify-content: space-between;
+        
+    }
 
 .slogan-text {
     flex: 1;
@@ -97,10 +99,10 @@
     padding-left:100px;
 }
 
-.slogan-text h2 {
-    font-size: 30px;
-    color: #2e5d35;
-    margin-bottom: 10px;
+.icon-title h2 {
+    font-size: clamp(25px, 4vw, 30px);
+    margin: 0px;
+    font-weight: 600;
 }
 
 .slogan-text p {
@@ -108,7 +110,7 @@
     line-height: 1.6;
     color: #444;
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing:2px;
 }
 
 .slogan-text .btn {
@@ -116,25 +118,35 @@
     background-color: #86B049;
     color: white;
     font-size: 18px;
-    padding: 12px 24px;
+    padding: 10px 19px 13px 20px;
     border-radius: 25px;
     display: inline-block;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: 500;
+    line-height: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
-.slogan-pic {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.slogan-text .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); 
+    background-color: #749644;
 }
+.slogan-pic {   
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    max-width: 500px;
+    padding-right: 50px;
+}
+
 
 .slogan-pic img {
 
-    width: 800px; 
-    height: 400px;          
+    max-width: 100%;
+    height:auto;          
     object-fit: contain;      
     object-position: center;   
 }
@@ -198,7 +210,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(30px, 4vw, 40px); 
     color: white;
     font-weight: 500;
     letter-spacing: 3px;
@@ -223,50 +235,86 @@
     display: block;
     height: 45%;
 }
+
 .icon-container {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    gap: 20px;
-    padding: 20px 0;
-}
-.icon-item{
-    display: flex;
+    background-color: rgb(255, 245, 232);
+    /* padding: 50px 0 0 0; */
+    padding: 30px;
+    /* margin-top: -130px; */
     flex-direction: column;
+}
+
+.icon-title {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    text-align: center;
+    line-height: 45px;
+    text-align: justify;
+}
+
+.icon-title p {
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.icon-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.icon-item {
+    flex: 1 1 30%;
+    max-width: 30%;
+    padding: 0px;
+    display: flex;               /* 讓內部能對齊 */
+    flex-direction: column;      /* 讓 icon + 文字垂直排列 */
+    justify-content: center;     /* 上下置中 */
+    align-items: center;         /* 左右置中 */
+    text-align: center;          /* 文字內容置中 */   /* 可自訂 */
+}
+
+.icon-circle {
+    width: 130px;
+    height: 130px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
 }
-.icon-item
-    img {
-        width: 100px;
-        height: 100px;
-        margin-right: 10px;
-        color: #2e5d35;
-    }
 
-.icon-item
-    p {
-        font-size: 25px;
-        font-size: 20px;
-        line-height: 1.6;
-        color: #444;
-        font-weight: 500;
-        letter-spacing: 3px;
-        padding-top: 18px;
-    }
+.icon-circle img {
+    width: 70px;
+    height: 70px;
+}
 
-    .video-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.icon-item p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #444;
+    font-weight: 500;
+    letter-spacing: 3px;
+    padding-top: 18px;
+}
+.icon-title h2{
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.video-wrapper {
+    width:100%;
+    padding: 0px;
 }
 
 .video-wrapper iframe {
     width: 100%;
-    height: 500px;
-    border-radius: 12px; 
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    height: 600px;
+    /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); */
 }
 
 
@@ -290,6 +338,7 @@
     gap: 10px;
     height: 32px;
     object-fit: contain;
+
     
 }
 .story-list {
@@ -303,71 +352,341 @@
     display: flex;
     width: calc(50% - 10px); 
     border: 2px solid #444;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
-    height: 200px;
     box-sizing: border-box;
     text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: stretch; /* ✅ 讓圖片和文字等高 */
+    min-height: 140px;    /* ✅ 不會太扁 */
 }
 
 .story img {
     width: 200px;
-    height: 100%;
-    object-fit: cover;
+    min-width: 150px;     /* ✅ 不會小於這個寬度 */
+    height: 100%;         /* ✅ 高度撐滿父層 */
+    object-fit: cover;    /* ✅ 裁切填滿不變形 */
     border-radius: 10px 0 0 10px;
-
 }
 
 .story p {
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 2.0;
     color: #444;
     font-weight: 400;
-    letter-spacing: 4px;
-    padding: 15px 15px 15px 13px;
-    
+    letter-spacing: 2px;
+    padding: 8px 6px 8px 8px;
 }
+
 
 .story:hover {
     transform: scale(1.01);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #86B049;
 }
 
-.photo-gallery {
+.photo-gallery-grid {
     display: flex;
-    flex-direction: row;
-    height: 400px;
-    width: 100vw; 
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .photo-collage {
-    display: flex;
-    height: 400px;
-    width: 50%;
-}
-.photo-collage .reverse{
-    display: flex;
-    height: 400px;
-    width: 50%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 50%; /* 一半寬度剛好兩組排一排 */
 }
 
-.left-big,
-.right-small {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    
+.photo-collage .left-big {
+    grid-row: 1 / span 2;
+    grid-column: 1 / 2;
 }
 
-.right-small img {
-    flex: 1;
-    height: calc(50%);
-    object-fit: cover;
-    width: 100%;
+.photo-collage .top-small {
+    grid-row: 1;
+    grid-column: 2;
 }
 
-.left-big img {
+.photo-collage .bottom-small {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.photo-collage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
+
+/* 如果你要反轉左右結構： */
+.photo-collage.reverse {
+    grid-template-columns: 1fr 2fr;
+}
+
+.photo-collage.reverse .left-big {
+    grid-column: 2 / 3;
+}
+
+.photo-collage.reverse .top-small,
+.photo-collage.reverse .bottom-small {
+    grid-column: 1 / 2;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+
+.card img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    aspect-ratio: 2 / 3;
+}
+.card{
+    width: 100%;
+    margin: 15px;
+    max-width: 200px;
+    margin-top: -90px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 20px);
+}
+.card .place-icon {
+    width:  14px;
+    height: 14px;
+    vertical-align: middle; 
+} 
+
+.destinations .card:nth-child(4) {
+    display: none;
+    }
+ /* .card img{
+        max-width: 230px;
+        padding: 0px;
+        margin: 0px;
+        } */
+}
+.slogan-text p{
+    font-size: 18px;
+}       
+.story-list {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    margin-bottom: 20px;
+    }
+.story {
+    flex-direction: row; 
+    width: 100%;
+    }
+.story p {
+        font-size: 15px;  
+        line-height: 1.5;
+        letter-spacing: 1;
+        color: #444;
+        overflow: hidden; 
+        }
+.icon-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 40px;
+}
+.story img {
+    border-radius: 8px 0px 0px 8px;
+    
+
+}
+
+
+
+
+@media (max-width: 767px) {
+.hero {
+    height: 300px;
+}
+
+.cta-button {
+    margin: 0 auto;
+}
+.destinations {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin-top: -40px;
+    gap: 20px;
+}
+.card {
+    margin: 0;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 20px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+}
+
+
+
+.slogan-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    display: flex;
+}
+
+.slogan-text {
+    text-align: center;
+    padding: 0;
+}
+
+.icon-title h2 {
+    font-size: clamp(20px, 4vw, 25px);
+    margin: 0px;
+    font-weight: 600;
+}
+.icon-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.icon-item {
+    flex: 1 1 30%;
+    max-width: 30%;
+    min-width: 0;  
+}
+
+.slogan-text .btn {
+    margin-top: 5px;
+}
+
+.slogan-pic img {
+    max-width: 100%;
+    height: auto;
+}
+
+.slogan-pic {
+    padding-right: 0;
+    width: 100%;
+    justify-content: center;
+}
+ .story img {
+    border-radius: 8px 0px 0px 8px;
+    
+
+}
+
+
+/* 5. idea / photo 區塊：不固定高度，改 column */
+.idea-pic,
+.photo-collage { height: auto; }
+.idea-pic,
+.small-pic { flex-direction: column;
+                gap: 15px; }
+.idea-pic img {
+    width: 100%;
+    aspect-ratio: 4 / 3;        /* 想正方形就 1/1 */
+    object-fit: cover;
+    border-radius: 12px;
+}
+.icon-container{
+    height: auto;        /* ⭐ 取消寫死高度 */
+    padding: 20px 0;     /* 視覺再留 20px 上下內距 */
+    margin: 20px 0 0;    /* 想再靠上就改得更小 */
+  }
+  .icon-title{
+    padding: 10px 25px 25px 25px;
+    margin: 0px 0px 0px 0px;
+    
+  }
+
+  .icon-title p {
+    font-size: 18px;
+    letter-spacing: 1;
+    text-align: center;
+    line-height: 1.7;
+    
+}
+  .icon-title h2{
+    text-align: center;
+  }
+  .icon-row{
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .icon-circle{
+    width: 100px;
+    height: 100px;
+  }
+.icon-circle img {
+    width: 50px;
+    height: 50px;
+}
+.icon-item p{
+    font-size: 18px;
+}
+/* 6. 影片 iframe：高度設相對比例 */
+.video-wrapper iframe { height: 56.25vw; } /* 16:9 比例 */
+
+
+.story { width: 100%; height: auto; flex-direction: column; }
+.story img { width: 100%; height: 200px; border-radius: 10px 10px 0 0; }
+/* .story p   { padding: 12px;
+ } */
+
+.photo-gallery-grid{
+    display:flex;
+    flex-direction:column;
+}
+.photo-collage{
+    width:100%;           
+}
+
+.site-footer{
+    padding-top: 30px;
+}
+.footer-links.only-desktop {
+    display: none; 
+}
+.footer-social {
+    justify-content: center;
+    display: flex;
+}
+.footer-social img{
+    width: 35px;
+    height: 35px;
+}
+
+/* 8. 通用：保險起見隱藏任何 X 軸溢位 */
+body, html { overflow-x: hidden; }
+}
+
+
+@media (max-width: 425px) {
+  .story-list {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .story {
+    width: 100% !important; /* ✅ 確保不會被下面覆蓋 */
+    flex-direction: column;
+    display: flex;
+  }
+
+  .story img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px 0px 0px 5px;
+  }
+
+}
+
+

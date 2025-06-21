@@ -22,24 +22,24 @@
 }
 
 .banner h1 {
-    font-size: 45px;
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: 10px;
+    font-size: clamp(24px, 6vw, 40px); 
+    font-weight: 500;
+    letter-spacing: 0.6em;
+    text-align: center; 
 }
 
 .banner p {
-    font-size: 26px;
+    font-size: clamp(16px, 4vw, 26px); 
     margin: 10px 0 0;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 0.2em;
 }
 .contact-slogan {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 40px;
-    padding: 40px 20px;
+    gap: 30px;
+    padding: 20px 40px 30px 40px;
     align-items: flex-start;
 }
 
@@ -48,7 +48,12 @@
     flex: 3;
     height: 400px;
     justify-content: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .pic {
     position: absolute;
@@ -57,18 +62,16 @@
     object-fit: cover;
     border: 6px solid white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    right: 0px;
 }
 
 .pic-left {
     top: 0;
-    left: 150px;
+    left: 100px;
     transform: rotate(-6deg);
 }
 
 .pic-right {
     top: 100px;
-    left: 320px;
     transform: rotate(6deg);
 }
 
@@ -77,8 +80,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    text-align: center;
+    height: 400px;
 }
+
 
 .text-box {
     text-align: center;
@@ -117,11 +122,6 @@
     gap: 20px; 
     background-color: #e2e4d2;
 }
-
-.contact-form {
-    flex: 1;
-    padding: 40px 20px;
-}
 .form-image{
     align-items: stretch;
     display: flex;
@@ -145,10 +145,12 @@
     align-items: center;  
     text-align: center;
     height: 400px; 
+    flex: 1;
+    padding: 40px 20px;
 }
 .contact-form h2 {
     
-    font-size: 22px;
+    font-size: 21px;
     letter-spacing: 4px;
     padding: 15px;
     margin-bottom: 10px;
@@ -228,4 +230,91 @@ textarea::placeholder {
     background-color: #72963c;   
     transform: scale(1.03);   
 }
+
+@media (max-width: 1000px) {
+.slogan-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    min-height: 390px; 
+    width: 100%;
+
+}
+
+.pic{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 250px;
+    /* position: initial; */
+
+}
+
+.contact-banner {
+    margin-bottom: 20px;
+    height: 200px;
+    width: 100%;
+    
+}
+.contact-slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 20px 20px 20px 20px;
+}
+
+
+
+.slogan-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+
+}
+
+.form {
+    flex-direction: column;
+    height: auto; /* ✅ 不固定高度，讓內容自然撐開 */
+}
+
+.contact-form,
+.form-image {
+    width: 100%;
+    height: auto;
+}
+
+.form-image img {
+    width: 100%; 
+    height: auto;
+}
+.pic-left {
+    rotate(-4deg);
+    left: initial;
+}
+
+.pic-right {
+    rotate(4deg);
+}
+.contact-us-form h2{
+    font-size: clamp(17px, 5vw, 25px);
+}
+.contact-form h2{
+    font-size: clamp(17px, 5vw, 25px);
+}
+.text-box h2{
+    font-size: clamp(17px, 5vw, 25px);
+}
+.text-box {
+    max-width: 450px;
+}
+
+}
+
+
+
 

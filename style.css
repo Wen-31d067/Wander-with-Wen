@@ -36,6 +36,10 @@ body {
     margin-top: 10px;
 }
 
+.nav-links.active {
+    display: flex;
+}
+
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -85,9 +89,11 @@ body {
     display: flex;
 }
 
+
+
 /* 手機樣式 */
 @media (max-width: 767px) {
-    .nav-links {
+.nav-links {
     display: none;
     flex-direction: column;
     background-color: #476930;
@@ -117,20 +123,20 @@ body {
 }
 
 .dropdown:hover .submenu {
-    display: none; /* 禁用 hover 行為 */
+    display: none;
 }
 
 
 .dropdown.open .submenu {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .dropdown.open .submenu {
     display: flex;
 }
 .dropdown .submenu {
-  display: none;
+    display: none;
 }
 }
 

@@ -21,17 +21,17 @@
 }
 
 .banner h1 {
-    font-size: 45px;
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: 10px;
+    font-size: clamp(24px, 6vw, 40px); 
+    font-weight: 500;
+    letter-spacing: 0.6em;
+    text-align: center; 
 }
 
 .banner p {
-    font-size: 26px;
+    font-size: clamp(16px, 4vw, 26px); 
     margin: 10px 0 0;
     font-weight: 400;
-    letter-spacing: 4px;
+    letter-spacing: 0.2em;
 }
 
 

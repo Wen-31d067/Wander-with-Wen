@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="nav.js" defer></script>
 
+
 </head>
 <body>
 <div id="nav-placeholder"></div>
@@ -27,7 +28,7 @@
         <span>Canada加拿大</span></p>
     </div>
     <div class="card">
-        <img src="machu picchu fog.jpeg" alt="">
+        <img src="machu_picchu_fog.jpeg" alt="">
         <p><img src="pin.png" alt="icon" class="place-icon">
         <span>Peru秘魯</span></p>
     </div>
@@ -178,7 +179,7 @@
 
 <div class="photo-collage">
     <div class="left-big">
-        <img src="japan 711.jpeg" alt="">
+        <img src="japan_711.jpeg" alt="">
     </div>
     <div class="top-small">
         <img src="forest.jpeg" alt="">
@@ -190,7 +191,7 @@
 
 <div class="photo-collage reverse">
     <div class="left-big">
-        <img src="center island.jpeg" alt="">
+        <img src="center_island.jpeg" alt="">
     </div>
     <div class="top-small">
         <img src="Jeepney.jpeg" alt="">
@@ -230,18 +231,28 @@
 </div> -->
 
 <script>
-    fetch('nav.html')
+fetch('nav.html')
     .then(res => res.text())
     .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
+    document.getElementById("nav-placeholder").innerHTML = data;
+
+      // ✅ 等載入完 nav.html 再綁定漢堡事件
+    const toggleBtn = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+    if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        });
+    }
     });
 
-    fetch('footer.html')
+fetch('footer.html')
     .then(res => res.text())
     .then(data => {
-        document.getElementById("footer-placeholder").innerHTML = data;
+    document.getElementById("footer-placeholder").innerHTML = data;
     });
 </script>
+
 
 
 </body>

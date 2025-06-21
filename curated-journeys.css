@@ -22,17 +22,17 @@
 }
 
 .banner h1 {
-    font-size: 45px;
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: 10px;
+    font-size: clamp(24px, 6vw, 40px); 
+    font-weight: 500;
+    letter-spacing: 0.6em;
+    text-align: center; 
 }
 
 .banner p {
-    font-size: 26px;
+    font-size: clamp(16px, 4vw, 26px); 
     margin: 10px 0 0;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 0.2em;
 }
 .continent-buttons{
     display: flex;
@@ -46,16 +46,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-        /* width: 200px;
-        height: 200px; */
     border-radius: 30px;
-    padding: 40px;
+    padding: 30px;
     color: white;
     font-weight: bold;
     font-size: 35px;
     text-decoration: none;
     transition: transform 0.3s, box-shadow 0.3s;
-    margin: 15px;
+    margin: 7px;
     z-index: 2;
     aspect-ratio: 1 / 1;
     overflow: hidden;
@@ -76,7 +74,7 @@
     color: #ffffff;
 }
 
-/* 各州別背景圖 */
+
 .continent.asia::before {
     background-image: url("asia.png");
 }
@@ -89,7 +87,6 @@
     background-image: url("north-america.png");
 }
 
-/* 讓文字蓋在圖上方 */
 .continent {
     z-index: 8;
 }
@@ -108,9 +105,8 @@
 .dropdown-container {   
     max-width: 1200px;
     margin: 0 auto;
-    text-align: right;     /* 讓內容靠右 */
+    text-align: right;
     padding: 10px 40px; 
-       /* 可調整右邊距離 */
 }
 
 .select {
@@ -134,76 +130,82 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     
 }
-.card-container{
-    padding-top: 0px;
-    
-}
-.card-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+
+.all-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 15px;
     max-width: 1200px;
-    margin: 20px auto;
-    justify-content: center;
-    margin-bottom: 100px;
+    margin: 0px auto ;
+    padding: 0 20px;
 }
 
+/* ✅ 卡片本體樣式 */
 .card {
-    width: 360px;
     background-color: #e5e5e5;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    flex-direction: row;
     transition: transform 0.3s ease;
-    
+    text-decoration: none;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: auto; 
+    margin-right: auto;
+    gap: 0px;
+    height: auto; 
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
-
+.card-image{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    aspect-ratio: 5 / 4;
+}
 .card img {
     width: 100%;
-    height: 220px;
+    height: 100%;
     object-fit: cover;
-    aspect-ratio: 5/4;
+    aspect-ratio: 5 / 4;
 }
-
 
 .card-text {
-    padding: 15px 20px;
-    height: 100%;
-    display: flex;     
-    flex-direction: column;  
+    padding: 10px 20px 10px 20px;
+    height:auto;
+    /* max-height: 410px; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
 }
 
-
-
-.card-text h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-    font-weight: 700;
-    line-height: 1.4;
-    
+.card-text h2 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0px;
 }
-
 .card-text p {
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 16px;
     color: #444;
     flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.9;
 }
 
-.card-text a {
-    color:#86B049;
-    text-decoration: none;
-    display: block;
+.read-more {
     text-align: right;
-    font-weight: 500;
+    color:#86B049;
+    font-weight: bold;
     margin-top: auto;
+    align-self: flex-end;
 }
 
 .card-text-link:hover {
@@ -211,69 +213,6 @@
     cursor: pointer;
 }
 
-@media (min-width: 500px) and (max-width: 1023px){
-
-
-    .card-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px auto 100px;
-    } 
-    .card-list{
-        margin: 10px 10px 10px 10px;
-    }
-
-    .card {    
-    flex: 1 1 calc(50% - 15px); 
-    max-width: calc(50% - 15px);
+.card.hidden {
+    display: none !important;
 }
-.continent{
-    white-space: nowrap;
-}
-
-}
-
-
-@media (max-width: 499px){
-.card {
-    flex: 1 1 100%;
-    max-width: 100%;
-}
-.card-list{
-    margin: 10px 10px 10px 10px;
-}
-
-.continent-buttons {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 3px;
-    margin: 05px;
-}
-
-.continent {
-    flex: 1 1 33.3333%;
-    max-width: 33.3333%;
-    aspect-ratio: 1 / 1;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    white-space: nowrap;  
-    text-decoration: none;
-    margin: 1%;
-    font-size: clamp(22px, 4vw, 25px);
-}
-
-}
-
-
-
-
-
-
-

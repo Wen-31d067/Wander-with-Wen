@@ -12,7 +12,7 @@
 
 <body>
     <div id="nav-placeholder"></div>
-
+    
 </header>
 <section class="contact-banner">
     <div class="banner">
@@ -22,25 +22,80 @@
 </section>
 <div class="continent-buttons">
     <a href="asia.html" class="continent asia">亞&nbsp;&nbsp;&nbsp;&nbsp;洲</a>
-    <a href="asia.html" class="continent south">南美洲</a>
-    <a href="asia.html" class="continent north">北美洲</a>
+    <a href="South-America.html" class="continent south">南美洲</a>
+    <a href="North-America.html" class="continent north">北美洲</a>
 </div>
+
+
+
 <div class="dropdown-container">
     <label for="continent-select">依洲別搜尋：</label>
     <select id="continent-select" name="continent" class="select">
         <option selected disabled>搜尋洲別 ▾ </option>
         <option value="asia">亞洲</option>
-        <option value="na">北美洲</option>
-        <option value="sa">南美洲</option>
+        <option value="north-america">北美洲</option>
+        <option value="south-america">南美洲</option>
+        <option value="all">全部</option>
     </select>
 </div>
 
+<div class="all-cards card-list"></div>
+
+<script>
+// 🌟 1. 洗牌函式
+function shuffle(array) {
+for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+}
+}
+
+const sources = ["asia.html", "North-America.html", "South-America.html"];
+const allCards = [];
+
+Promise.all(
+sources.map(url =>
+    fetch(url)
+    .then(res => res.text())
+    .then(html => {
+        const temp = document.createElement("div");
+        temp.innerHTML = html;
+        const cards = temp.querySelectorAll(".card");
+        cards.forEach(card => allCards.push(card));
+    })
+)
+).then(() => {
+const container = document.querySelector(".all-cards");
+
+  // 🌟 2. 打亂順序
+shuffle(allCards);
+
+  // 🌟 3. 放進頁面中
+allCards.forEach(card => container.appendChild(card));
+
+  // 🌟 4. 篩選功能
+const select = document.getElementById("continent-select");
+const cards = document.querySelectorAll(".card");
+
+  select.addEventListener("change", (e) => {
+    const selected = e.target.value;
+
+    cards.forEach(card => {
+      const region = card.getAttribute("data-continent");
+      card.style.display = (selected === "all" || region === selected) ? "flex" : "none";
+    });
+  });
+});
+</script>
+
+
+<!-- 
 
 <section class="card-container">
 <div class="card-list">
 
     <article class="card">
-    <img src="panama grilled fish.jpeg" alt="巴拿馬">
+    <img src="panama_grilled_fish.jpeg" alt="巴拿馬">
     <div class="card-text">
         <h3>巴拿馬｜從市場小吃到運河邊的生活</h3>
         <p>漫步巴拿馬老城，感受運河的壯觀工程與歷史痕跡。走進色彩繽紛的街區、品嚐在地小吃，搭配熱帶節奏，開啟一段充滿拉丁風情的城市旅程。</p>
@@ -49,7 +104,7 @@
     </article>
 
     <article class="card">
-        <img src="peru cusco squre.jpeg" alt="秘魯">
+        <img src="peru_cusco_square.jpeg" alt="秘魯">
         <div class="card-text">
         <h3>秘魯｜在玉米湯與古城間找回旅行初心</h3>
         <p>從庫斯科出發，踏上印加古道，一路穿越山谷與古城，走進神秘的馬丘比丘。在高海拔的陽光與遺跡中，體驗印加文化的壯麗與靜謐。
@@ -59,7 +114,7 @@
     </article>
 
     <article class="card">
-        <img src="time square.jpeg" alt="紐約">
+        <img src="time_square.jpeg" alt="紐約">
         <div class="card-text">
         <h3>紐約｜在夢想與高樓間，試著不被淹沒</h3>
         <p>城市的節奏很快，夢想還沒整理好就被推著前行。
@@ -69,7 +124,7 @@
     </div>
     </article>
     <article class="card">
-    <img src="japan 711.jpeg" alt="日本">
+    <img src="japan_711.jpeg" alt="日本">
     <div class="card-text">
         <h3>日本｜日常，就在便利商店</h3>
         <p>我超愛在便利商店裡探險。每天更新的「小型寶物展覽」。
@@ -79,7 +134,7 @@
     </article>
 
     <article class="card">
-        <img src="taiwan nightmarket.jpeg" alt="台灣">
+        <img src="taiwan_nightmarket.jpeg" alt="台灣">
         <div class="card-text">
         <h3>台灣｜早餐店與夜市，就是生活的味道</h3>
         <p>從早餐店的豆漿油條，到夜市的鹽酥雞與地瓜球，台灣的每口食物都是家的味道。山海之間，總有一條屬於自己的散步路線。
@@ -89,7 +144,7 @@
     </article>
 
     <article class="card">
-        <img src="center island.jpeg" alt="多倫多">
+        <img src="center_island.jpeg" alt="多倫多">
         <div class="card-text">
         <h3>多倫多｜異國風味混合著家的味道</h3>
         <p>在多倫多這座移民城市裡，每條街道都說著不同語言。週末市集、湖邊公園與融合風味的美食，共同拼出一個屬於這裡的溫柔日常。</p>
@@ -108,7 +163,7 @@
     </article>
 
     <article class="card">
-        <img src="spicy noodle.jpeg" alt="韓國">
+        <img src="spicy_noodle.jpeg" alt="韓國">
         <div class="card-text">
         <h3>韓國｜熱呼呼部隊鍋與深夜便利店探險</h3>
         <p>首爾的節奏又快又熱鬧，從弘大藝術街到景福宮的靜謐古韻，街頭小吃、便利店美學與咖啡廳日常，是韓國最迷人的對比。</p>
@@ -126,7 +181,7 @@
     </article>
 
     <article class="card">
-        <img src="tim hortons.jpeg" alt="加拿大">
+        <img src="tim_hortons.jpeg" alt="加拿大">
         <div class="card-text">
         <h3>加拿大｜最熟悉的那杯Tim Hortons</h3>
         <p>走在多倫多街頭，手裡捧著熱呼呼的 double-double，搭配一口甜甜圈。城市的清晨從一杯咖啡開始，平凡日常中藏著加拿大最溫柔的風景。</p>
@@ -135,7 +190,7 @@
     </article>
 
     <article class="card">
-        <img src="cafe_vietnamese sandwich dkbg.jpeg" alt="越南">
+        <img src="cafe_vietnames_sandwich_dkbg.jpeg" alt="越南">
         <div class="card-text">
         <h3> 越南｜咖啡不是提神，是一種節奏</h3>
         <p>在越南，咖啡不只是醒腦的飲料，而是一種慢下來的節奏。坐在路邊小椅子上，看著滴漏一滴一滴落下，就是他們的生活方式與日常儀式感。</p>
@@ -150,33 +205,31 @@
         <p>霧氣繚繞的早晨，在市場裡挑水果，在松樹間喝一杯熱咖啡。碧瑤的日子，有種剛剛好的靜謐與溫暖。</p>
         <a href="article-vietnam.html">閱讀全文 →</a>
     </div>
-    </article>
+    </article> -->
 
 </div>
 </section>
-
-<footer class="site-footer">
-<div class="footer-container">
-    <div class="footer-left">
-        <p>不想錯過下次的旅行靈感嗎？</p>
-        <p>訂閱電子報，第一時間收到最真實的旅遊故事與小資秘境推薦！</p>
-        <form class="subscribe-form">
-        <input type="email" placeholder="輸入您的email">
-        <button>訂閱電子報</button>
-</form>
-    </div>
-
+<div id="footer-placeholder"></div>
 <script>
-    fetch('nav.html')
+fetch('nav.html')
     .then(res => res.text())
     .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
+    document.getElementById("nav-placeholder").innerHTML = data;
+
+      // ✅ 等載入完 nav.html 再綁定漢堡事件
+    const toggleBtn = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+    if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        });
+    }
     });
 
-    fetch('footer.html')
+fetch('footer.html')
     .then(res => res.text())
     .then(data => {
-        document.getElementById("footer-placeholder").innerHTML = data;
+    document.getElementById("footer-placeholder").innerHTML = data;
     });
 </script>
 </body>

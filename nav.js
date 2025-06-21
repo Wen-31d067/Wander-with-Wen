@@ -1,22 +1,31 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu   = document.getElementById('nav-menu');
+.then(res => res.text())
+.then(data => {
+  document.getElementById("nav-placeholder").innerHTML = data;
 
-  // 開關主選單
-    hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+  // ✅ 修正抓法（你用的是 class="hamburger" 和 id="nav-menu"）
+  const toggleBtn = document.querySelector(".hamburger");
+  const navLinks = document.getElementById("nav-menu");
+  const dropdown = document.querySelector('.dropdown');
 
-  // 手機下拉（旅途誌）開關
-    const dropdown = document.querySelector('.dropdown');
-    dropdown.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle('open');
-});
-});
-// 點畫面其他地方，關閉展開的 submenu
-document.addEventListener('click', () => {
-  document.querySelectorAll('.dropdown.open').forEach(drop => {
-    drop.classList.remove('open');
+  // 漢堡選單開關
+  if (toggleBtn && navLinks) {
+    toggleBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+
+  // 手機版下拉選單
+  if (dropdown) {
+    dropdown.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle("open");
+    });
+  }
+
+  // 點空白處關掉下拉選單
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".dropdown.open").forEach(drop => {
+      drop.classList.remove("open");
+    });
   });
 });

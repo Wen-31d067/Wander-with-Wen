@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="about-us.css">  
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="nav.js" defer></script>
+
 </head>
 <body>
-<div id="nav-placeholder"></div>
+<div id="nav-placeholder"></div>;
 
 
 <section class="about-banner">
@@ -69,17 +70,27 @@
 
 
 <script>
-    fetch('nav.html')
+fetch('nav.html')
     .then(res => res.text())
     .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
+    document.getElementById("nav-placeholder").innerHTML = data;
+
+      // ✅ 等載入完 nav.html 再綁定漢堡事件
+    const toggleBtn = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+    if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        });
+    }
     });
 
-    fetch('footer.html')
+fetch('footer.html')
     .then(res => res.text())
     .then(data => {
-        document.getElementById("footer-placeholder").innerHTML = data;
+    document.getElementById("footer-placeholder").innerHTML = data;
     });
 </script>
+
 </body>
 </html>

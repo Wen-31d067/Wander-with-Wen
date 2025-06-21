@@ -132,12 +132,6 @@ body {
     flex-direction: column;
 }
 
-.dropdown.open .submenu {
-    display: flex;
-}
-.dropdown .submenu {
-    display: none;
-}
 }
 
 

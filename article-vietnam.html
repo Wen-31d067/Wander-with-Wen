@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>越南・胡志明市</title>  
     <link rel="stylesheet" href="style.css">  
-    <link rel="stylesheet" href="article-vietnam.css">  
+    <link rel="stylesheet" href="article.css">  
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="nav.js" defer></script>
 
@@ -15,13 +15,13 @@
 
 
 <section class="contact-banner">
-    <div class="banner">
+    <div class="banner-vietnam">
 </div>
 </section>
 
 <div class="section-title">
     <h2>越南・胡志明市🇻🇳</h2>
-    <p>Ho Chi Minh City, Vietnam</p>
+    <p>Ho Chi Minh City,Vietnam</p>
 </div>
 
 
@@ -41,7 +41,7 @@
 <section class="second-block">
 <div class="block">
     <figure>
-        <img src="cafe gate.jpeg" alt="沒有招牌的咖啡館">
+        <img src="cafe_gate.jpeg" alt="沒有招牌的咖啡館">
         <figcaption>一杯滴漏咖啡，一張椅子，就是一個下午</figcaption>
     </figure>
     <div class="text">
@@ -77,7 +77,7 @@
     </div>
 
     <figure>
-        <img src="Coconut smoothie.jpeg" alt="椰子冰沙">
+        <img src="Coconut_smoothie.jpeg" alt="椰子冰沙">
         <figcaption>我以為只是拍照道具，結果是真的會喝完</figcaption>
     </figure>
 </div>
@@ -96,12 +96,12 @@
     </figure>
     
     <figure>
-        <img src="cafe letter.jpeg" alt="咖啡館3">
+        <img src="cafe_letter.jpeg" alt="咖啡館3">
         <figcaption>咖啡店沒有網路，但很適合寫信</figcaption>
     </figure>
 
     <figure>
-        <img src="cafe pic.jpeg" alt="咖啡館4">
+        <img src="cafe_pic.jpeg" alt="咖啡館4">
         <figcaption>牆上的老照片，比裝潢會說故事</figcaption>
     </figure>
 </div>
@@ -141,9 +141,8 @@ fetch('nav.html')
     .then(data => {
     document.getElementById("nav-placeholder").innerHTML = data;
 
-      // ✅ 等載入完 nav.html 再綁定漢堡事件
-    const toggleBtn = document.getElementById("nav-toggle");
-    const navLinks = document.getElementById("nav-links");
+    const toggleBtn = document.getElementById("toggle");
+    const navLinks = document.getElementById("nav-menu");
     if (toggleBtn && navLinks) {
         toggleBtn.addEventListener("click", () => {
         navLinks.classList.toggle("active");

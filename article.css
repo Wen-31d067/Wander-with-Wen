@@ -1,21 +1,27 @@
 .contact-banner {
     width: 100%;
     height: 300px; 
-    background-image: url('cafe_vietnamese\ sandwich\ wood.jpeg'); 
+    background-image: url('cafe_vietnames_sandwich.jpeg'); 
     background-size: cover;
     background-position: center 60%;
     display: flex;
     overflow: hidden;
     margin-bottom: 10px;
 }
+.contact-banner.Manila {
+    background-image: url('makati.jpeg');
+}
 
+.contact-banner.seoul {
+    background-image: url('korea_street.jpeg');
+}
 
-.banner {
+/* .banner {
     text-align: center;
     color: white;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     
-}
+} */
 
 
 .section-title {
@@ -39,12 +45,12 @@
 .section-title p {
     font-size: 20px;
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: #333;
 }
 .first{
     max-width: 1200px;
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     margin: 0 auto;
 }
 .first-content {
@@ -58,7 +64,7 @@
 }
 .first-content p{
     font-size: 17px;
-    line-height: 1.9;
+    line-height: 1.7;
     color: #222;
     text-align:left;
 }
@@ -109,7 +115,7 @@
     align-items: center;
     margin: 0;
     border: 1px solid #444;
-    height: auto;               /* ✅ 高度隨內容自動撐開 */
+    height: auto;
     overflow: visible;
 }
 

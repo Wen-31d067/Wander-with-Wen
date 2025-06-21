@@ -11,7 +11,7 @@ body {
 /* 共用樣式 */
 .nav {
     background-color: #476930;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 20px;
     position: relative;
     z-index: 1000;
 }
@@ -23,9 +23,12 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
+/* .logo{
+    height: auto;
+} */
 .logo img {
-    width: 250px; /* 想調整大小這裡改 */
+    width: 200px;
+    padding-bottom: 0px;
 }
 
 .nav-links {
@@ -33,7 +36,6 @@ body {
     gap: 20px;
     list-style: none;
     padding: 0;
-    margin-top: 10px;
 }
 
 .nav-links.active {

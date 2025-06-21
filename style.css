@@ -135,13 +135,14 @@ ul {
 
 .submenu {
     position: relative;
-    background-color: #476930;
+    background-color: white;
+    color: #476930;
     box-shadow: none;
 
 }
 
 .submenu a {
-    color: white;
+    color: #476930;
 }
 
 

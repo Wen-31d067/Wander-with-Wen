@@ -34,7 +34,7 @@
   </div>
 
   <div class="photo-card">
-    <img src="machu picchu fog.jpeg" alt="Peru">
+    <img src="machu_picchu_fog.jpeg" alt="Peru">
     <div class="info">
       <h3>📍馬丘比丘．祕魯</h3>
       <p>印加遺址的奇蹟，令人讚嘆的山中之城。藏在安地斯山脈深處的神祕古城，只有搭火車、健行、或走上多日的印加古道才能抵達。</p>
@@ -80,7 +80,7 @@
   </div>
 
   <div class="photo-card">
-    <img src="center island.jpeg" alt="toronto">
+    <img src="center_island.jpeg" alt="toronto">
     <div class="info">
       <h3>📍多倫多．加拿大</h3>
       <p>多倫多是一座融合多元文化的城市，從湖畔散步道到唐人街巷弄，都能感受到豐富的生活節奏。無論是漫步在市中心，還是在公園裡靜靜坐下來，多倫多總能讓人用最自然的方式親近城市、貼近人心。</p>
@@ -91,7 +91,7 @@
 <!-- 第4行：3欄 -->
 <div class="photo-grid three-cols">
   <div class="photo-card">
-    <img src="panama grilled fish.jpeg" alt="panama">
+    <img src="panama_grilled_fish.jpeg" alt="panama">
     <div class="info">
       <h3>📍巴拿馬．中美洲</h3>
       <p>除了運河，巴拿馬還有加勒比風情的老城區、滿是色彩的街頭與熱情的笑容。這裡不只是通往世界的門口，更是能停下來感受生活節奏的南方角落。</p>
@@ -107,7 +107,7 @@
   </div>
 
   <div class="photo-card">
-    <img src="japan 711.jpeg" alt="japan">
+    <img src="japan_711.jpeg" alt="japan">
     <div class="info">
       <h3>📍東京．日本</h3>
       <p>東京是速度與秩序的結合，霓虹燈下有不夜城，也有靜謐神社。從巷口咖啡店到下町風情，用雙腳探索這座城市的每一種可能。</p>
@@ -116,15 +116,15 @@
 </div>
 
 <div id="footer-placeholder"></div>
+
 <script>
 fetch('nav.html')
     .then(res => res.text())
     .then(data => {
     document.getElementById("nav-placeholder").innerHTML = data;
 
-      // ✅ 等載入完 nav.html 再綁定漢堡事件
-    const toggleBtn = document.getElementById("nav-toggle");
-    const navLinks = document.getElementById("nav-links");
+    const toggleBtn = document.getElementById("toggle");
+    const navLinks = document.getElementById("nav-menu");
     if (toggleBtn && navLinks) {
         toggleBtn.addEventListener("click", () => {
         navLinks.classList.toggle("active");
@@ -138,5 +138,7 @@ fetch('footer.html')
     document.getElementById("footer-placeholder").innerHTML = data;
     });
 </script>
+
+
 </body>
 </html>

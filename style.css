@@ -38,6 +38,7 @@ body {
 
 .nav-links.active {
     display: flex;
+    
 }
 
 .nav-links a {
@@ -45,6 +46,11 @@ body {
     text-decoration: none;
     font-weight: 500;
     font-size: 17px;
+    white-space: nowrap;
+}
+
+.nav-links a:hover{
+    color: #c3a755;
 }
 
 .hamburger {
@@ -70,6 +76,8 @@ body {
     position: relative;
 }
 
+
+
 .submenu {
     display: none;
     position: absolute;
@@ -77,16 +85,22 @@ body {
     top: 100%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     flex-direction: column;
-    padding: 10px;
+    padding: 7px;
+    flex-wrap: nowrap;
 }
 
 .submenu a {
+    display: block;
     color: #2e5d35;
-    padding: 5px 0;
+    padding: 5px 5px 5px 5px ;
 }
 
 .dropdown:hover .submenu {
     display: flex;
+}
+
+ul {
+    list-style: none;
 }
 
 
@@ -108,22 +122,31 @@ body {
     display: flex;
 }
 
+
 .hamburger {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;    
+    border: none;
+    padding: 0; 
 }
 
 .submenu {
     position: relative;
     background-color: #476930;
     box-shadow: none;
+
 }
 
 .submenu a {
     color: white;
 }
 
+
 .dropdown:hover .submenu {
-    display: none;
+    display: flex;
 }
 
 
@@ -131,6 +154,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 
 }
 

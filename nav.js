@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const toggleBtn = document.querySelector(".hamburger");
+  const toggleBtn = document.getElementById("toggle");
   const navLinks = document.getElementById("nav-menu");
-  const dropdown = document.querySelector('.dropdown');
+  const dropdown = document.getElementById("dropdown_btn");
 
   // 點漢堡 → 展開選單
   toggleBtn.addEventListener("click", () => {

@@ -181,9 +181,8 @@ fetch('nav.html')
     .then(data => {
     document.getElementById("nav-placeholder").innerHTML = data;
 
-      // ✅ 等載入完 nav.html 再綁定漢堡事件
-    const toggleBtn = document.getElementById("nav-toggle");
-    const navLinks = document.getElementById("nav-links");
+    const toggleBtn = document.getElementById("toggle");
+    const navLinks = document.getElementById("nav-menu");
     if (toggleBtn && navLinks) {
         toggleBtn.addEventListener("click", () => {
         navLinks.classList.toggle("active");

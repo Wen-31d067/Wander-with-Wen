@@ -98,7 +98,7 @@
   display: block;
 }
 
-/* ✅ 滑入時的 info 區塊 */
+
 .photo-card .info {
   position: absolute;
   inset: 0;
@@ -116,7 +116,7 @@
   line-height: 1.6;
 }
 
-/* ✅ 滑入時圖片放大 + 文字浮現 */
+
 .photo-card:hover img {
   filter: brightness(90%);
   transform: scale(1.05);
@@ -125,6 +125,7 @@
 .photo-card:hover .info {
   opacity: 1;
 }
+
 
 
 @media (max-width: 768px) {
@@ -148,10 +149,24 @@
     margin-bottom: 50px;
   }
 
+  .photo-card:hover img {
+  filter: brightness(90%);
+  transform: scale(1.05);
+}
+
 .photo-card {
     margin: 5px 10px 5px 10px;
   }
   
+.photo-card .info {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.photo-card:hover .info,
+.photo-card.show .info {
+  opacity: 1;
+}
 }
 
 @media (max-width: 375px) {
@@ -159,6 +174,17 @@
   padding: 20px 15px 20px 15px;
   text-align: justify;
 }
+
+.photo-card .info {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.photo-card:hover .info,
+.photo-card.show .info {
+  opacity: 1;
+}
+
 }
 
 

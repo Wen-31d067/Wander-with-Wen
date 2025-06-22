@@ -16,6 +16,33 @@
     background-image: url('korea_street.jpeg');
 }
 
+.contact-banner.taiwan {
+    background-image: url('stinky_tofu.jpeg');
+}
+
+.contact-banner.panama-fish {
+    background-image: url('panama_grilled_fish.jpeg');
+}
+
+.contact-banner.peru-machupicchu {
+    background-image: url('machu_picchu2.jpeg');
+}
+.contact-banner.panama-canal {
+    background-image: url('panama_canal.jpeg');
+}
+
+.contact-banner.toronto {
+    background-image: url('canada_day.jpeg');
+}
+
+.contact-banner.nyc {
+    background-image: url('time_square.jpeg')
+}
+
+.contact-banner.quebec {
+    background-image: url('quebec.jpeg')
+}
+
 /* .banner {
     text-align: center;
     color: white;

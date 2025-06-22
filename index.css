@@ -494,7 +494,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-    gap: 40px;
+    gap: 35px;
 }
 .story img {
     border-radius: 8px 0px 0px 8px;
@@ -505,7 +505,7 @@
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 .hero {
     height: 300px;
 }
@@ -534,7 +534,19 @@
     aspect-ratio: 3/4;
 }
 
+.video-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
 
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+}
 
 .slogan-container {
     flex-direction: column;
@@ -580,7 +592,7 @@
     justify-content: center;
 }
  .story img {
-    border-radius: 8px 0px 0px 8px;
+    border-radius: 5px 0px 0px 5px;
     
 
 }
@@ -602,40 +614,43 @@
     height: auto;        /* ⭐ 取消寫死高度 */
     padding: 20px 0;     /* 視覺再留 20px 上下內距 */
     margin: 20px 0 0;    /* 想再靠上就改得更小 */
-  }
-  .icon-title{
+}
+.icon-title{
     padding: 10px 25px 25px 25px;
     margin: 0px 0px 0px 0px;
     
-  }
+}
 
-  .icon-title p {
+.icon-title p {
     font-size: 18px;
     letter-spacing: 1;
     text-align: center;
     line-height: 1.7;
     
 }
-  .icon-title h2{
+.icon-title h2{
     text-align: center;
-  }
-  .icon-row{
+}
+.icon-row{
     flex-wrap: nowrap;
     gap: 10px;
-  }
-  .icon-circle{
+}
+.icon-circle{
     width: 100px;
     height: 100px;
-  }
+}
 .icon-circle img {
     width: 50px;
     height: 50px;
 }
 .icon-item p{
-    font-size: 18px;
+    font-size: 17px;
 }
-/* 6. 影片 iframe：高度設相對比例 */
-.video-wrapper iframe { height: 56.25vw; } /* 16:9 比例 */
+
+.video-wrapper {
+    max-height: 300px; 
+}
+
 
 
 .story { width: 100%; height: auto; flex-direction: column; }
@@ -666,30 +681,30 @@
     height: 35px;
 }
 
-/* 8. 通用：保險起見隱藏任何 X 軸溢位 */
+
 body, html { overflow-x: hidden; }
 }
 
 
 @media (max-width: 425px) {
-  .story-list {
+.story-list {
     flex-direction: column;
     display: flex;
     flex-wrap: wrap;
     display: flex;
-  }
+}
 
-  .story {
-    width: 100% !important; /* ✅ 確保不會被下面覆蓋 */
+.story {
+    width: 100% !important;
     flex-direction: column;
     display: flex;
-  }
+}
 
-  .story img {
+.story img {
     width: 100%;
     height: 200px;
     border-radius: 5px 5px 0px 0px;
-  }
+}
 
 }
 

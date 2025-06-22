@@ -272,6 +272,23 @@ h2 {
     filter: invert(1);
 }
 
+.slide-up {
+    animation: slideUp 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    0% {
+    transform: translateY(50px);
+    opacity: 0;
+    }
+    100% {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+
+
 /* ＝＝ 桌機（預設）＝＝ */
 .only-desktop { display:inline; }   /* 顯示桌機整句 */
 .only-mobile  { display:none;  }   /* 手機專用文字先關閉 */

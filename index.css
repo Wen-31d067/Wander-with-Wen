@@ -271,11 +271,11 @@
     flex: 1 1 30%;
     max-width: 30%;
     padding: 0px;
-    display: flex;               /* 讓內部能對齊 */
-    flex-direction: column;      /* 讓 icon + 文字垂直排列 */
-    justify-content: center;     /* 上下置中 */
-    align-items: center;         /* 左右置中 */
-    text-align: center;          /* 文字內容置中 */   /* 可自訂 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .icon-circle {
@@ -357,15 +357,15 @@
     box-sizing: border-box;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    align-items: stretch; /* ✅ 讓圖片和文字等高 */
-    min-height: 140px;    /* ✅ 不會太扁 */
+    align-items: stretch;
+    min-height: 140px;
 }
 
 .story img {
     width: 200px;
-    min-width: 150px;     /* ✅ 不會小於這個寬度 */
-    height: 100%;         /* ✅ 高度撐滿父層 */
-    object-fit: cover;    /* ✅ 裁切填滿不變形 */
+    min-width: 150px;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px 0 0 10px;
 }
 
@@ -376,6 +376,7 @@
     font-weight: 400;
     letter-spacing: 2px;
     padding: 8px 6px 8px 8px;
+    text-align: justify;
 }
 
 
@@ -396,7 +397,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 50%; /* 一半寬度剛好兩組排一排 */
+    width: 50%;
 }
 
 .photo-collage .left-big {
@@ -421,7 +422,6 @@
     display: block;
 }
 
-/* 如果你要反轉左右結構： */
 .photo-collage.reverse {
     grid-template-columns: 1fr 2fr;
 }
@@ -684,7 +684,7 @@ body, html { overflow-x: hidden; }
   .story img {
     width: 100%;
     height: 200px;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 5px 5px 0px 0px;
   }
 
 }

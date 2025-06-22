@@ -85,7 +85,7 @@
 }
 
 .slogan-container {
-        max-width: 1200px;
+        max-width: 800px;
         margin: 0 auto;
         display: flex;          
         align-items: center;
@@ -95,8 +95,8 @@
 
 .slogan-text {
     flex: 1;
-    min-width: 300px;
-    padding-left:100px;
+    max-width: 300px;
+    padding-left:50px;
 }
 
 .icon-title h2 {
@@ -245,6 +245,7 @@
     padding: 30px;
     /* margin-top: -130px; */
     flex-direction: column;
+
 }
 
 .icon-title {
@@ -276,6 +277,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+
 }
 
 .icon-circle {
@@ -300,6 +302,7 @@
     font-weight: 500;
     letter-spacing: 3px;
     padding-top: 18px;
+    white-space: nowrap;
 }
 .icon-title h2{
     font-size: 30px;
@@ -438,7 +441,7 @@
 .photo-collage.reverse .bottom-small {
     grid-column: 1 / 2;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
 
 .card img{
     width: 100%;
@@ -470,7 +473,7 @@
         padding: 0px;
         margin: 0px;
         } */
-}
+
 .slogan-text p{
     font-size: 18px;
 }       
@@ -501,11 +504,12 @@
     
 
 }
+}
 
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 .hero {
     height: 300px;
 }
@@ -591,29 +595,30 @@
     width: 100%;
     justify-content: center;
 }
- .story img {
+.story img {
     border-radius: 5px 0px 0px 5px;
     
 
 }
 
 
-/* 5. idea / photo 區塊：不固定高度，改 column */
 .idea-pic,
 .photo-collage { height: auto; }
 .idea-pic,
 .small-pic { flex-direction: column;
-                gap: 15px; }
+        gap: 15px; 
+    }
+
 .idea-pic img {
     width: 100%;
-    aspect-ratio: 4 / 3;        /* 想正方形就 1/1 */
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 12px;
 }
 .icon-container{
-    height: auto;        /* ⭐ 取消寫死高度 */
-    padding: 20px 0;     /* 視覺再留 20px 上下內距 */
-    margin: 20px 0 0;    /* 想再靠上就改得更小 */
+    height: auto;
+    padding: 20px 0;
+    margin: 20px 0 0;
 }
 .icon-title{
     padding: 10px 25px 25px 25px;
@@ -622,10 +627,10 @@
 }
 
 .icon-title p {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1;
     text-align: center;
-    line-height: 1.7;
+    line-height: 1.6;
     
 }
 .icon-title h2{
@@ -648,7 +653,7 @@
 }
 
 .video-wrapper {
-    max-height: 300px; 
+    max-height: 250px; 
 }
 
 

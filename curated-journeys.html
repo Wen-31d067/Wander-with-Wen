@@ -77,14 +77,14 @@ allCards.forEach(card => container.appendChild(card));
 const select = document.getElementById("continent-select");
 const cards = document.querySelectorAll(".card");
 
-  select.addEventListener("change", (e) => {
+select.addEventListener("change", (e) => {
     const selected = e.target.value;
 
     cards.forEach(card => {
-      const region = card.getAttribute("data-continent");
-      card.style.display = (selected === "all" || region === selected) ? "flex" : "none";
+    const region = card.getAttribute("data-continent");
+    card.style.display = (selected === "all" || region === selected) ? "flex" : "none";
     });
-  });
+});
 });
 </script>
 

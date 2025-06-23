@@ -43,6 +43,19 @@
     background-image: url('quebec.jpeg')
 }
 
+.contact-banner.Convenience-Store {
+    background-image: url('japan_711.jpeg')
+}
+.contact-banner.korea {
+    background-image: url('spicy_noodle.jpeg')
+}
+.contact-banner.Jeepney {
+    background-image: url('Jeepney.jpeg')
+}
+.contact-banner.tainan {
+    background-image: url('tainan_food.jpeg')
+}
+
 /* .banner {
     text-align: center;
     color: white;

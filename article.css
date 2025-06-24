@@ -8,6 +8,7 @@
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 .contact-banner.Manila {
     background-image: url('makati.jpeg');
 }
@@ -69,7 +70,6 @@
     padding: 20px 20px 0px 20px;
     max-width: 1200px;
     margin: 0 auto;
-
 }
 
 .section-title h2 {
@@ -79,38 +79,46 @@
     margin-bottom: 10px;
     color: #111;
 }
+
 .text{
     text-align: left;
 }
+
 .section-title p {
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 2px;
     color: #333;
 }
+
 .first{
     max-width: 1200px;
     padding: 20px 20px 10px 20px;
     margin: 0 auto;
 }
+
 .first-content {
     margin-top: 0px;
 }
+
 .first-content h2{
     font-size: 17px;
     font-weight: 500;
     letter-spacing: 2px;
     color:#476930;
 }
+
 .first-content p{
     font-size: 17px;
     line-height: 1.7;
     color: #222;
     text-align:left;
 }
+
 .p{
     text-align: left;
 }
+
 /* .second-block{
     display: flex;
     max-width: 1200px;
@@ -124,6 +132,7 @@
     margin: 0 auto;
     padding-top: 0px;
 }
+
 .block {
     display: flex;
     margin: 0 auto;
@@ -165,12 +174,14 @@
     height: 100%;        
     object-fit: cover;
 }
-.block figcaption{
-    padding: 0px 5px 5px 5px;
+figcaption{
+    padding: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;   
     margin: 0;
+    color: #505050;
+    font-size: 13px;
 }
 
 
@@ -209,6 +220,8 @@
     line-height: 1.9;
     padding-bottom: 130px;
     }
+
+
 @media (min-width: 768px) and (max-width: 1023px){
 
 .contact-banner {
@@ -223,8 +236,6 @@
 .section-title {
     margin: 0px;
     text-align: left;
-
-
 }
 .block {
     display: flex;
@@ -251,10 +262,7 @@
 .block4{
     display: flex;
 }
-
 }
-
-
 
 
 @media (max-width: 768px) {

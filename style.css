@@ -6,8 +6,18 @@
     }
     
 body {
-    font-family: "Noto Sans TC","Noto Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+font-family: 
+    "Noto Sans TC", 
+    "Noto Sans", 
+    "Helvetica Neue", 
+    "Helvetica", 
+    "Arial", 
+    "Segoe UI Emoji", 
+    "Apple Color Emoji", 
+    "Noto Color Emoji", 
+    sans-serif;
 }
+
 /* 共用樣式 */
 .nav {
     background-color: #476930;

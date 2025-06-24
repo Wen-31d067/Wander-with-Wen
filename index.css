@@ -381,8 +381,7 @@
     line-height: 1.8;
     color: #444;
     font-weight: 400;
-    letter-spacing: 1.5px;
-    padding: 8px 6px 8px 8px;
+    padding: 7px 8px 8px 8px;
     text-align: justify;
 }
 
@@ -478,7 +477,7 @@
     font-size: 18px;
 }       
 .story-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     display: grid;
     margin-bottom: 20px;
     }
@@ -487,11 +486,11 @@
     width: 100%;
     }
 .story p {
-        font-size: 15px;  
-        line-height: 1.5;
-        letter-spacing: 1;
+        font-size: 16px;  
+        line-height: 1.8;
         color: #444;
         overflow: hidden; 
+        padding: 10px 10px 10px 10px;
         }
 .icon-row {
     display: flex;

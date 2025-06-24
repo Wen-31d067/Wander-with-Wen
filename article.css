@@ -57,6 +57,17 @@
     background-image: url('tainan_food.jpeg')
 }
 
+.contact-banner.Border-Crossing {
+    background-image: url('border_bluesky.jpeg')
+}
+
+.contact-banner.canada {
+    background-image: url('canada_day.jpeg')
+}
+
+.contact-banner.Tim-Horton {
+    background-image: url('tim_hortons.jpeg')
+}
 /* .banner {
     text-align: center;
     color: white;

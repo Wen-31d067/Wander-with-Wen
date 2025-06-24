@@ -183,7 +183,8 @@
     margin-top: 0px;
     /* position:relative; */
     height: calc(100%-300px);
-    padding: 10px 20px 50px 20px; 🚩 
+    padding: 10px 20px 50px 20px;
+    gap: 5px;
 }
 
 .card-text h2 {

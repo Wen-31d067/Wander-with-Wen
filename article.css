@@ -68,6 +68,14 @@
 .contact-banner.Tim-Horton {
     background-image: url('tim_hortons.jpeg')
 }
+
+.contact-banner.war {
+    background-image: url('war.jpeg')
+}
+
+.contact-banner.subway {
+    background-image: url('subway.jpeg')
+}
 /* .banner {
     text-align: center;
     color: white;
@@ -253,7 +261,7 @@ figcaption{
 }
 .block {
     display: flex;
-    flex-direction: column;
+    flex-direction: column ;
     margin-bottom: 20px;
     align-items: center; 
     gap: 14px; 
@@ -277,6 +285,18 @@ figcaption{
     display: flex;
 }
 }
+
+/* @media (min-width: 650px) and (max-width: 1023px){
+p{
+        max-width: 630px;
+        text-align: justify;
+    }
+.section-title{
+    max-width: 630px;
+}
+.f{
+    max-width: 630px;
+} */
 
 
 @media (max-width: 768px) {
@@ -320,6 +340,10 @@ figcaption{
     text-align: justify;
 
 }
+.third-block .block{
+    flex-direction: column-reverse;
+}
+
 .block4 figure {
     width: 100%;
 }
@@ -338,7 +362,7 @@ figcaption{
     gap: 0px;
 }
 .text{  
-    padding: 0px;
+    padding: 8px 0px;
 }
 
 }
@@ -347,7 +371,7 @@ figcaption{
 
 @media (min-width: 425px) and (max-width: 768px) {
 .forth-block {
-    padding: 20px 25px;
+    padding: 20px 25px 0px 25px;
     margin: 0 auto;
 }
 

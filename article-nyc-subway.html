@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地鐵逃票日常・紐約</title>  
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="article.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="nav.js" defer></script>
+
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+
+<section class="contact-banner subway">
+    <div class="banner">
+</div>
+</section>
+
+<div class="section-title">
+    <h2>地鐵逃票日常・紐約</h2>
+    <p>Skipping the Fare, New York</p>
+</div>
+
+
+<article class="first">
+<div class="first-content">
+    <h2>又亂又刺激，真的像影片裡演的那樣</h2>
+    <p>
+    那幾天我住在紐約牙買加區，麥當勞門口有保全，裡頭有人播音樂、聊天、嗑藥，一開始真的有點怕。
+    有次交通卡刷不過，站務不理我，反而是一位痞痞的大哥幫我開門，一起逃票。
+    在紐約，逃票像日常，地鐵亂、髒、詭異，卻也真誠又刺激，像在玩一場城市版的密室逃脫。
+</p>
+</div>
+</article>
+
+<section class="second-block">
+<div class="block">
+    <figure>
+        <img src="subway.jpeg" alt="熟能生巧的男子">
+        <figcaption>熟能生巧的男子</figcaption>
+    </figure>
+    <div class="text">
+        <p>每天紐約地鐵都有無數故事正在發生，有人為了趕上班翻越閘門，有人是習慣成自然的「地下冒險家」，也有人只是單純不想付 2.90 元。這裡是節奏過快的城市，法規、禮貌、邊界都模糊，像是每個人都用自己的方法與世界妥協。地鐵不是只有通勤功能，更像是一座城市的縮影，有急躁的腳步、有熙攘的沉默，也有難以定義的荒謬日常。當我第一次親眼看到有人跳閘時，那一瞬間有點震撼、又有點幽默。那不是電影，而是紐約生活的其中一幕。那名男子落地時的動作俐落自然，像練過一樣，周圍沒人驚訝，只有我忍不住倒抽一口氣。後來才知道這樣的情景每天都在上演，有人把它當作一種生存策略，有人視為對高昂交通費的小小反抗，也有人單純是城市裡的幽靈旅人。
+</p>
+    </div>
+</div>
+</section>
+
+<section class="third-block">
+<div class="block">
+    <div class="text">
+        <p>在紐約，地鐵票幾乎是一張城市身分證。從老式的地鐵代幣到今日的MetroCard，它不只是一張塑膠片，更是城市記憶的縮影。這張卡片曾陪著無數人趕上清晨第一班車、在深夜最後一班列車中思考人生；它也見證了地鐵站裡的吵鬧、藝術、表演與無數擦肩而過的陌生人。地鐵是紐約的血管，而車票，就是進入這座城市節奏的通行證。
+        隨著科技進步，MetroCard 也即將被OMNY感應付款系統取代。許多人開始懷念那張需要插卡、刷卡，有時還刷不過的黃色車票。那是一種儀式感，也是一種紐約獨有的幽默與忍耐。你永遠不知道這次刷卡會不會成功，也永遠不知道會遇上什麼樣的乘客與故事。有人說，地鐵票其實記錄的不是金額，而是你與這座城市共享的生活。
+</p>
+
+    </div>
+
+    <figure>
+        <img src="metrocard.jpeg" alt="MetroCard">
+        <figcaption>MetroCard</figcaption>
+    </figure>
+</div>
+</section>
+
+<section class="forth-block">
+<div class="block4">
+    <figure>
+        <img src="subway_dirty.jpeg" alt="骯髒的地鐵">
+        <figcaption>骯髒的地鐵</figcaption>
+    </figure>
+
+    <figure>
+        <img src="subway_sleeping.jpeg" alt="疲憊的乘客">
+        <figcaption>疲憊的乘客</figcaption>
+    </figure>
+    
+    <figure>
+        <img src="subway_entrance.jpeg" alt="地鐵站的入口">
+        <figcaption>地鐵站的入口</figcaption>
+    </figure>
+
+    <figure>
+        <img src="subway_map.jpeg" alt="密密麻麻的地圖">
+        <figcaption>密密麻麻的地圖</figcaption>
+    </figure>
+</div>
+</section>
+
+<section class="fifth-block">
+    <div class="text">
+        <p>
+    紐約的地鐵不只是一種交通方式，它是一座城市的縮影。這裡有速度、有衝突、有溫度，也有自由與無常。在不斷搖晃的車廂裡，每個人都是過客，卻也共同組成這場都市日常的即興演出。無論你從哪一站出發，最終都會遇見某種意想不到。
+        </p>
+    </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+
+<script>
+fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+    document.getElementById("nav-placeholder").innerHTML = data;
+
+    const toggleBtn = document.getElementById("toggle");
+    const navLinks = document.getElementById("nav-menu");
+    if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        });
+    }
+    });
+
+fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+    document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

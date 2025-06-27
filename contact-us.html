@@ -63,6 +63,28 @@
     <button type="submit" class="submit-btn">送出表單</button>
 
 </form>
+
+<!-- <script>
+    the_file_element.addEventListener("change", function () {
+  [...this.files].forEach(file => {               // 展開 FileList → Array
+    if (!file.type.startsWith("image/")) return; // 只接受圖片
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onload = e => {
+      const li = document.createElement("li");   // <li>
+      const img = document.createElement("img"); // <img>
+      img.className = "preview";
+      img.src = e.target.result;                 // 直接賦值
+
+      li.appendChild(img);
+      document.querySelector(".picture_list")
+              .appendChild(li);                  // 安全插入
+    };
+  });
+});
+
+</script> -->
 </section>
 
 

@@ -312,6 +312,19 @@ textarea::placeholder {
     max-width: 450px;
 }
 
+input {
+  margin-top: 1rem;
+}
+
+input::file-selector-button {
+  font-weight: bold;
+  color: rgb(109, 255, 30);
+  padding: 0.5em;
+  border: thin solid grey;
+  border-radius: 3px;
+}
+
+
 }
 
 

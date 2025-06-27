@@ -76,6 +76,36 @@
 .contact-banner.subway {
     background-image: url('subway.jpeg')
 }
+
+.contact-banner.Church {
+    background-image: url('church.jpeg')
+}
+
+.contact-banner.Lima {
+    background-image: url('lima_love_park.jpeg')
+}
+
+.contact-banner.cusco {
+    background-image: url('cusco_mountainview.jpeg')
+}
+
+.contact-banner.pharmacy {
+    background-image: url('peru_medical.jpeg')
+}
+
+.contact-banner.hat {
+    background-image: url('panama_hat.jpeg')
+}
+
+.contact-banner.taxi {
+    background-image: url('argue.jpeg')
+}
+
+.contact-banner.Huacachina {
+    background-image: url('Huacachina1.jpeg')
+}
+
+
 /* .banner {
     text-align: center;
     color: white;

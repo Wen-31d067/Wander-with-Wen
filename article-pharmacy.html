@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生病・秘魯</title>  
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="article.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="nav.js" defer></script>
+
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+
+<section class="contact-banner pharmacy">
+    <div class="banner">
+</div>
+</section>
+
+<div class="section-title">
+    <h2>生病・秘魯</h2>
+    <p>Sick,Peru
+</p>
+</div>
+
+
+<article class="first">
+<div class="first-content">
+    <h2>我在庫斯科發高燒，又解鎖了生存技能</h2>
+    <p>
+    在庫斯科的最後幾天，原本只是想看看印加遺跡、喝點可可茶，結果卻病得一塌糊塗。
+    高燒連續燒了四天，還一直嘔吐，喉嚨痛、頭痛，連走去廁所都覺得困難。整個人只能躺在床上，聽著窗外的狗叫聲和汽車喇叭。
+    我一直以為旅途中最難的是語言不通或迷路，但真正的考驗，是在異地生病時的那種無助和難受。
+    秘魯的醫療資源又少又貴，吃了好幾天的藥也只能慢慢撐著。
+    不過也因為這樣，我才真的放慢下來，開始學著照顧自己。
+</div>
+</article>
+
+<section class="second-block">
+<div class="block">
+    <figure>
+        <img src="pharmacy.jpeg" alt="庫斯科的連鎖藥局">
+        <figcaption>庫斯科的連鎖藥局</figcaption>
+    </figure>
+    <div class="text">
+        <p>走進秘魯的藥局（Farmacia），感受到的是一種不疾不徐、但充滿無奈的日常。
+            照片中這位藥師認真地為顧客解說藥品劑量與用途，他的專業態度讓人安心，但在交談過程中，
+            我也聽見了顧客的猶豫，這個藥有點貴，那個藥要吃多久？在秘魯，醫療不像台灣那麼普及與便宜。
+            很多人無法負擔正式看診，只能到藥局自行描述症狀、靠藥師判斷處方。曾有一晚我病倒，
+            身體極度不適卻找不到醫院，只能硬撐著走進藥局求助，那一刻我感受到不只是身體的病痛，
+            而是一種在異鄉無力的漂泊感。而這樣的困境，卻是許多當地人每天面對的現實。
+</p>
+    </div>
+</div>
+</section>
+
+<section class="third-block">
+<div class="block">
+    <div class="text">
+        <p>旅途中最怕的就是生病。在秘魯，我曾因喉嚨痛、頭痛、發燒而求助藥局，購買了照片中的藥品：
+            抗生素、止痛劑、止咳糖漿……加起來竟然花了將近100索爾，將近台幣 800 元，
+            對當地薪資水平來說非常高。最令人沮喪的是，這些藥吃了卻沒什麼效果，症狀只是被壓住，
+            沒真正改善。這讓我不禁思考，若連我這樣的外地旅客都覺得醫療開銷吃緊，那當地人面對慢性
+            病或緊急醫療時，該有多辛苦。更別說那些住在山區、交通不便的家庭，醫療資源更是遙不可及。
+            藥罐與鈔票並列的畫面，是我旅途中最直接也最心酸的一幕。
+</p>
+
+    </div>
+
+    <figure>
+        <img src="peru_medical.jpeg" alt="當地的藥物">
+        <figcaption>當地的藥物</figcaption>
+    </figure>
+</div>
+</section>
+
+<section class="forth-block">
+<div class="block4">
+    <figure>
+        <img src="cusco_medicine.jpeg" alt="效果不大的藥物">
+        <figcaption>效果不大的藥物</figcaption>
+    </figure>
+
+    <figure>
+        <img src="cusco_buy_medicine.jpeg" alt="來藥局諮詢藥物">
+        <figcaption>來藥局諮詢藥物</figcaption>
+    </figure>
+    
+    <figure>
+        <img src="cusco_sick.jpeg" alt="生病只能躺在床上">
+        <figcaption>生病只能躺在床上</figcaption>
+    </figure>
+
+    <figure>
+        <img src="cusco_recipt.jpeg" alt="藥局的收據">
+        <figcaption>藥局的收據</figcaption>
+    </figure>
+</div>
+</section>
+
+<section class="fifth-block">
+    <div class="text">
+        <p>
+        在異鄉生病，讓我看見的不只是身體的脆弱，更是當地人生活的不易。那一晚的喉嚨痛，
+        成了我理解秘魯庶民醫療現況的切入口，藥價高、效果有限、資源不均，許多人只能靠
+        藥局撐過每一次不舒服。想到這些病痛對他們來說是日常而非例外，我的心情沉重又敬佩。
+        旅行讓人看見風景，也讓人更靠近真實的人生。
+        </p>
+    </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+
+<script>
+fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+    document.getElementById("nav-placeholder").innerHTML = data;
+
+    const toggleBtn = document.getElementById("toggle");
+    const navLinks = document.getElementById("nav-menu");
+    if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        });
+    }
+    });
+
+fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+    document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
